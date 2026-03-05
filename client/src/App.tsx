@@ -11,7 +11,7 @@ import Tatuador10K from "./pages/tatuador10k";
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
+      <Route path={"/"} component={Tatuador10K} />
       <Route path={"/tatuador-10K"} component={Tatuador10K} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

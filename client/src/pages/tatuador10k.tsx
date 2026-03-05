@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Star, Zap, TrendingUp, Shield, BookOpen, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { fotoEbook } from '../assets/heropage_livros.png';
 
 export default function Tatuador10K() {
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
@@ -96,9 +97,9 @@ export default function Tatuador10K() {
       <nav className="fixed top-0 w-full bg-slate-950/95 backdrop-blur-md z-50 border-b border-amber-600/30">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="text-2xl font-black" style={{ fontFamily: "'Playfair Display', serif" }}>
-            <span className="text-amber-500">O Tatuador</span> <span className="text-amber-300">10K</span>
+            <span className="text-amber-500">A Bíblia do Tatuador</span> <span className="text-amber-300">10K</span>
           </div>
-          <Button className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-bold">
+          <Button onclick="window.location.href='https://pay.kiwify.com.br/fZC8xt0';" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-bold">
             Comprar Agora
           </Button>
         </div>
@@ -112,13 +113,13 @@ export default function Tatuador10K() {
             <div className="space-y-8 py-12">
               <div className="space-y-4">
                 <div className="inline-block bg-amber-600/20 border border-amber-600/50 rounded-full px-4 py-2 text-sm font-semibold text-amber-300">
-                  ⚡ Limitado: Apenas 100 cópias por R$100
+                  ⚡ Limitado: Apenas 100 cópias por R$147
                 </div>
                 <h1 className="text-6xl md:text-7xl font-black leading-tight text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Domine o Mercado. Faturamento <span className="text-amber-500">R$10K</span> Mensal.
+                  Domine o Mercado. Fature <span className="text-amber-500">R$10.000</span> por mês.
                 </h1>
                 <p className="text-xl text-gray-300 leading-relaxed" style={{ fontFamily: "'Sora', sans-serif" }}>
-                  O guia prático que tatuadores brasileiros estão usando para triplicar seu faturamento sem aumentar o número de clientes. Pronto para aplicar. Sem teoria vazia.
+                  O guia prático que tatuadores brasileiros estão usando para triplicar seu faturamento. Pronto para aplicar. Sem enrolação.
                 </p>
               </div>
 
@@ -142,7 +143,7 @@ export default function Tatuador10K() {
               </div>
 
               <div className="pt-4 flex gap-4">
-                <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-black text-lg h-16 rounded-lg shadow-2xl hover:shadow-amber-600/50 flex items-center gap-2">
+                <Button onclick="window.location.href='https://pay.kiwify.com.br/fZC8xt0';" size="lg" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-black text-lg h-16 rounded-lg shadow-2xl hover:shadow-amber-600/50 flex items-center gap-2">
                   QUERO MINHA CÓPIA AGORA
                   <ArrowRight className="w-5 h-5" />
                 </Button>
@@ -153,7 +154,7 @@ export default function Tatuador10K() {
             {/* Right - Hero Image */}
             <div className="relative h-full">
               <img 
-                src="/home/ubuntu/upload/Gemini_Generated_Image_fi7hsbfi7hsbfi7h.png"
+                src="{fotoEbook}"
                 alt="Tatuador profissional com o e-book"
                 className="w-full h-auto rounded-xl shadow-2xl border-2 border-amber-600/30"
               />
@@ -253,13 +254,13 @@ export default function Tatuador10K() {
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { num: "1", title: "A Matemática do Sucesso", desc: "Custo por agulha, fixed costs e precificação inteligente" },
+              { num: "1", title: "A Matemática do Sucesso", desc: "Custo por agulha, custos fixos e precificação inteligente" },
               { num: "2", title: "Vitrine de Luxo (Instagram)", desc: "Bio otimizada, Highlights estratégicos e a regra dos 3 posts" },
-              { num: "3", title: "Script de Fechamento de Ouro", desc: "Psicologia de vendas no WhatsApp: de 'Quanto é?' a 'Agendado'" },
-              { num: "4", title: "O Fim do No-Show", desc: "Sistema de taxa de sinal sem assustar clientes" },
+              { num: "3", title: "Script de Fechamento de Ouro", desc: "Psicologia de vendas no WhatsApp: de 'Quanto é?' para 'Agendado'" },
+              { num: "4", title: "O Fim do No-Show", desc: "Sistema de taxa de sinal sem assustar os clientes" },
               { num: "5", title: "Injeção de Caixa (Flash Day 2.0)", desc: "Gere R$2.000 em 24 horas com Stories" },
               { num: "6", title: "Upsell e Fidelização", desc: "Venda a segunda tatuagem antes de terminar a primeira" },
-              { num: "7", title: "O Vendedor 24h (Automação)", desc: "AI tools e WhatsApp Business para responder enquanto tatua" }
+              { num: "7", title: "O Vendedor 24h (Automação)", desc: "Ferramentas IA e WhatsApp Business para responder enquanto tatua" }
             ].map((module, idx) => (
               <Card key={idx} className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 border-amber-600/30 p-6 hover:border-amber-600/60 hover:shadow-lg hover:shadow-amber-600/20 transition-all">
                 <div className="flex items-start gap-4">
@@ -282,13 +283,13 @@ export default function Tatuador10K() {
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="text-3xl font-black text-white" style={{ fontFamily: "'Playfair Display', serif" }}>⚠️ <span className="text-amber-500">Oferta Limitada</span></h2>
           <p className="text-xl text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-            Apenas <span className="font-black text-amber-400">100 cópias</span> disponíveis por <span className="font-black text-amber-500">R$100</span>
+            Apenas <span className="font-black text-amber-400">100 cópias</span> disponíveis por <span className="font-black text-amber-500">R$147</span>
           </p>
           <p className="text-gray-300" style={{ fontFamily: "'Sora', sans-serif" }}>
-            Depois disso, o preço sobe para <span className="line-through">R$297</span>. Não é brincadeira.
+            Depois disso, o preço sobe para <span className="line-through">R$247</span>. Não é brincadeira.
           </p>
           <div className="pt-4">
-            <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-black text-lg h-16 rounded-lg shadow-2xl hover:shadow-amber-600/50 flex items-center gap-2 mx-auto">
+            <Button onclick="window.location.href='https://pay.kiwify.com.br/fZC8xt0';" size="lg" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-black text-lg h-16 rounded-lg shadow-2xl hover:shadow-amber-600/50 flex items-center gap-2 mx-auto">
               GARANTIR MINHA CÓPIA AGORA
               <ArrowRight className="w-5 h-5" />
             </Button>
@@ -304,9 +305,9 @@ export default function Tatuador10K() {
           </h2>
           <div className="space-y-6">
             {[
-              { q: "Como recebo o material?", a: "Você recebe um link de download imediatamente após a compra. É um PDF pronto para ler no seu celular ou computador." },
-              { q: "Posso aplicar isso se sou iniciante?", a: "Sim! O material foi feito para tatuadores de TODOS os níveis. Desde quem está começando até quem já fatura bem, tem conteúdo aplicável." },
-              { q: "Quanto tempo leva para ver resultados?", a: "Alguns tatuadores veem resultados em 1 semana (especialmente no módulo de preços). A maioria vê mudanças significativas em 30 dias." },
+              { q: "Como recebo o material?", a: "Você recebe um link de acesso imediatamente após a compra. É um PDF pronto para ler no seu celular ou computador." },
+              { q: "Posso aplicar isso se sou iniciante?", a: "Sim! O material foi feito para tatuadores de TODOS os níveis. Desde quem está começando até quem já fatura bem." },
+              { q: "Quanto tempo leva para ver resultados?", a: "Alguns tatuadores conseguem ver resultados em 1 semana (especialmente no módulo de preços). A maioria vê mudanças significativas em 30 dias." },
               { q: "E se não gostar?", a: "30 dias de garantia 100%. Se não gostar, devolvemos seu dinheiro sem perguntas. Mas 99% das pessoas adoram." },
               { q: "Isso funciona em qualquer cidade?", a: "Sim! O material é baseado em psicologia de vendas e estratégia de negócio. Funciona em São Paulo, Rio, interior, qualquer lugar." }
             ].map((faq, idx) => (
@@ -329,12 +330,9 @@ export default function Tatuador10K() {
             Não é sobre trabalhar mais. É sobre trabalhar melhor. Comece hoje.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-black text-lg h-16 rounded-lg shadow-2xl hover:shadow-amber-600/50 px-12 flex items-center gap-2">
-              COMPRAR AGORA - R$100
+            <Button onclick="window.location.href='https://pay.kiwify.com.br/fZC8xt0';" size="lg" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-black text-lg h-16 rounded-lg shadow-2xl hover:shadow-amber-600/50 px-12 flex items-center gap-2">
+              COMPRAR AGORA - R$147
               <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-amber-600 hover:border-amber-500 text-amber-400 hover:text-amber-300 font-bold text-lg h-16 rounded-lg px-12">
-              VER MAIS DETALHES
             </Button>
           </div>
           <p className="text-sm text-gray-400">
