@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Star, Zap, TrendingUp, Shield, BookOpen, ArrowRight } from "lucide-react";
 import { useState } from "react";
-import { fotoEbook } from '../assets/heropage_livros.png';
+import fotoEbook from '../assets/heropage_livros.png';
 
 export default function Tatuador10K() {
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
@@ -154,7 +154,7 @@ export default function Tatuador10K() {
             {/* Right - Hero Image */}
             <div className="relative h-full">
               <img 
-                src="{fotoEbook}"
+                src={fotoEbook}
                 alt="Tatuador profissional com o e-book"
                 className="w-full h-auto rounded-xl shadow-2xl border-2 border-amber-600/30"
               />
