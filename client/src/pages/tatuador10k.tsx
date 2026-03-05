@@ -99,70 +99,64 @@ export default function Tatuador10K() {
           <div className="text-2xl font-black" style={{ fontFamily: "'Playfair Display', serif" }}>
             <span className="text-amber-500">A Bíblia do Tatuador</span> <span className="text-amber-300">10K</span>
           </div>
-          <Button onclick="window.location.href='https://pay.kiwify.com.br/fZC8xt0';" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-bold">
+          <Button onClick={() => window.location.href = 'https://pay.kiwify.com.br/fZC8xt0'} className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-bold">
             Comprar Agora
           </Button>
         </div>
       </nav>
 
-      {/* Hero Section - Premium Image */}
-      <section className="pt-24 pb-0 px-4 bg-gradient-to-b from-slate-950 to-slate-900">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left Content */}
-            <div className="space-y-8 py-12">
-              <div className="space-y-4">
-                <div className="inline-block bg-amber-600/20 border border-amber-600/50 rounded-full px-4 py-2 text-sm font-semibold text-amber-300">
-                  ⚡ Limitado: Apenas 100 cópias por R$147
-                </div>
-                <h1 className="text-6xl md:text-7xl font-black leading-tight text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Domine o Mercado. Fature <span className="text-amber-500">R$10.000</span> por mês.
-                </h1>
-                <p className="text-xl text-gray-300 leading-relaxed" style={{ fontFamily: "'Sora', sans-serif" }}>
-                  O guia prático que tatuadores brasileiros estão usando para triplicar seu faturamento. Pronto para aplicar. Sem enrolação.
-                </p>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 text-lg text-gray-200">
-                  <Check className="w-6 h-6 text-amber-500 flex-shrink-0" />
-                  <span>7 módulos prontos para implementar hoje</span>
-                </div>
-                <div className="flex items-center gap-3 text-lg text-gray-200">
-                  <Check className="w-6 h-6 text-amber-500 flex-shrink-0" />
-                  <span>Scripts de vendas que FUNCIONAM no WhatsApp</span>
-                </div>
-                <div className="flex items-center gap-3 text-lg text-gray-200">
-                  <Check className="w-6 h-6 text-amber-500 flex-shrink-0" />
-                  <span>Tabelas de preços e custos para copiar</span>
-                </div>
-                <div className="flex items-center gap-3 text-lg text-gray-200">
-                  <Check className="w-6 h-6 text-amber-500 flex-shrink-0" />
-                  <span>Estratégia de Flash Day que gera R$2K em 24h</span>
-                </div>
-              </div>
-
-              <div className="pt-4 flex gap-4">
-                <Button onclick="window.location.href='https://pay.kiwify.com.br/fZC8xt0';" size="lg" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-black text-lg h-16 rounded-lg shadow-2xl hover:shadow-amber-600/50 flex items-center gap-2">
-                  QUERO MINHA CÓPIA AGORA
-                  <ArrowRight className="w-5 h-5" />
-                </Button>
-              </div>
-              <p className="text-sm text-gray-400">Acesso imediato ao PDF. Sem assinatura. Sem surpresas.</p>
+      <section className="min-h-[80vh] flex items-center justify-center py-20 px-4">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          
+          {/* Coluna da Esquerda: Texto e CTA */}
+          <div className="space-y-6 text-left">
+            <div className="inline-block px-3 py-1 rounded-full bg-amber-600/10 border border-amber-600/20 text-amber-500 text-sm font-medium italic">
+              ⚡ Limitado: Apenas 100 cópias por R$147
             </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
+              Domine o Mercado. <br />
+              <span className="text-amber-600">Fature R$10.000</span> por mês.
+            </h1>
+            
+            <p className="text-lg text-slate-400 max-w-xl">
+              O guia prático que tatuadores brasileiros estão usando para triplicar seu faturamento. 
+              Pronto para aplicar. Sem enrolação. [cite: 3, 5, 16]
+            </p>
 
-            {/* Right - Hero Image */}
-            <div className="relative h-full">
-              <img 
-                src={fotoEbook}
-                alt="Tatuador profissional com o e-book"
-                className="w-full h-auto rounded-xl shadow-2xl border-2 border-amber-600/30"
-              />
-            </div>
+            <ul className="space-y-3">
+              {[
+                "7 módulos prontos para implementar hoje ",
+                "Scripts de vendas que FUNCIONAM no WhatsApp ",
+                "Tabelas de preços e custos para copiar [cite: 15]",
+                "Estratégia de Flash Day que gera R$2K em 24h [cite: 12]"
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-2 text-slate-300">
+                  <CheckCircle2 className="text-amber-600 h-5 w-5" /> {item}
+                </li>
+              ))}
+            </ul>
+
+            <Button 
+              onClick={() => window.location.href = 'https://pay.kiwify.com.br/fZC8xt0'}
+              className="h-14 px-8 text-lg bg-amber-600 hover:bg-amber-700 text-black font-extrabold uppercase transition-all transform hover:scale-105"
+            >
+              Quero minha cópia agora →
+            </Button>
           </div>
+
+          {/* Coluna da Direita: Imagem do Mockup */}
+          <div className="relative flex justify-center items-center">
+            <div className="absolute inset-0 bg-amber-600/20 blur-[120px] rounded-full"></div>
+            <img 
+              src={fotoEbook} 
+              alt="Mockup da Bíblia do Tatuador 10K"
+              className="relative z-10 w-full max-w-lg drop-shadow-[0_35px_35px_rgba(217,119,6,0.3)] animate-float"
+            />
+          </div>
+          
         </div>
       </section>
-
       {/* Social Proof - Quick Stats */}
       <section className="py-16 px-4 bg-slate-900/50 border-y border-amber-600/20">
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
@@ -289,7 +283,7 @@ export default function Tatuador10K() {
             Depois disso, o preço sobe para <span className="line-through">R$247</span>. Não é brincadeira.
           </p>
           <div className="pt-4">
-            <Button onclick="window.location.href='https://pay.kiwify.com.br/fZC8xt0';" size="lg" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-black text-lg h-16 rounded-lg shadow-2xl hover:shadow-amber-600/50 flex items-center gap-2 mx-auto">
+            <Button onClick={() => window.location.href = 'https://pay.kiwify.com.br/fZC8xt0'} size="lg" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-black text-lg h-16 rounded-lg shadow-2xl hover:shadow-amber-600/50 flex items-center gap-2 mx-auto">
               GARANTIR MINHA CÓPIA AGORA
               <ArrowRight className="w-5 h-5" />
             </Button>
@@ -330,7 +324,7 @@ export default function Tatuador10K() {
             Não é sobre trabalhar mais. É sobre trabalhar melhor. Comece hoje.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button onclick="window.location.href='https://pay.kiwify.com.br/fZC8xt0';" size="lg" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-black text-lg h-16 rounded-lg shadow-2xl hover:shadow-amber-600/50 px-12 flex items-center gap-2">
+            <Button onClick={() => window.location.href = 'https://pay.kiwify.com.br/fZC8xt0'} size="lg" className="bg-amber-600 hover:bg-amber-700 text-slate-950 font-black text-lg h-16 rounded-lg shadow-2xl hover:shadow-amber-600/50 px-12 flex items-center gap-2">
               COMPRAR AGORA - R$147
               <ArrowRight className="w-5 h-5" />
             </Button>
