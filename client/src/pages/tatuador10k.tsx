@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Check, Star, Zap, TrendingUp, Shield, BookOpen, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
-export default function Home() {
+export default function Tatuador10K() {
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
 
   const testimonials = [
