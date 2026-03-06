@@ -11,7 +11,7 @@ export default function Tatuador10K() {
     {
       name: "Felipe Mendes",
       city: "Curitiba, PR",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1761956256758-0db249d48d52?w=200&h=200&fit=crop",
       text: "Comprei o e-book e na primeira semana já implementei o módulo de preços. Meus clientes nem piscaram quando aumentei de R$250 para R$400. O ROI foi imediato!",
       result: "R$2.800 → R$9.500/mês",
       rating: 5
@@ -19,7 +19,7 @@ export default function Tatuador10K() {
     {
       name: "Lucas Oliveira",
       city: "Salvador, BA",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1769971279527-fabf4a1f7bed?w=200&h=200&fit=crop",
       text: "Os scripts de WhatsApp do módulo 3 mudaram meu jogo. Passei de 30% de conversão para 67%. Não é coincidência, é psicologia aplicada mesmo. Recomendo demais!",
       result: "R$3.200 → R$10.800/mês",
       rating: 5
@@ -27,7 +27,7 @@ export default function Tatuador10K() {
     {
       name: "Bruno Silva",
       city: "Brasília, DF",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1658555651570-e905d75e1a7e?w=200&h=200&fit=crop",
       text: "O módulo de Flash Day me gerou R$2.100 em 36 horas. Nunca tinha visto isso acontecer. O e-book é bem direto, sem blá blá blá. Só tática que funciona.",
       result: "R$2.500 → R$8.200/mês",
       rating: 5
@@ -35,7 +35,7 @@ export default function Tatuador10K() {
     {
       name: "Anderson Costa",
       city: "Recife, PE",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?w=200&h=200&fit=crop",
       text: "Implementei o sistema de taxa de sinal e meus no-shows caíram de 25% para 3%. Além disso, meu caixa ficou muito mais previsível. Vale cada centavo investido.",
       result: "R$2.900 → R$9.700/mês",
       rating: 5
@@ -51,7 +51,7 @@ export default function Tatuador10K() {
     {
       name: "Rafael Martins",
       city: "Manaus, AM",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1762108669948-28cca17ff73c?w=200&h=200&fit=crop",
       text: "O módulo de automação me libertou. Agora o WhatsApp Business responde os curiosos enquanto estou tatuando. Ganhei 15 horas por semana de produtividade.",
       result: "R$2.600 → R$8.900/mês",
       rating: 5
