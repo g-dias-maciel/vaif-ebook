@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Check, Star, Zap, TrendingUp, Shield, BookOpen, ArrowRight } from "lucide-react";
+import { Check, Star, Zap, TrendingUp, Shield, BookOpen, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import fotoEbook from '../assets/heropage_livros.png';
 
