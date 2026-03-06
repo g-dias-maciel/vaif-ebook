@@ -121,15 +121,15 @@ export default function Tatuador10K() {
             
             <p className="text-lg text-slate-400 max-w-xl">
               O guia prático que tatuadores brasileiros estão usando para triplicar seu faturamento. 
-              Pronto para aplicar. Sem enrolação. [cite: 3, 5, 16]
+              Pronto para aplicar. Sem enrolação.
             </p>
 
             <ul className="space-y-3">
               {[
                 "7 módulos prontos para implementar hoje ",
                 "Scripts de vendas que FUNCIONAM no WhatsApp ",
-                "Tabelas de preços e custos para copiar [cite: 15]",
-                "Estratégia de Flash Day que gera R$2K em 24h [cite: 12]"
+                "Tabelas de preços e custos para copiar",
+                "Estratégia de Flash Day que gera R$2K em 24h"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-2 text-slate-300">
                   <CheckCircle2 className="text-amber-600 h-5 w-5" /> {item}
