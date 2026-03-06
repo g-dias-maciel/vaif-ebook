@@ -115,7 +115,7 @@ export default function Tatuador10K() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
-              Domine o Mercado. <br />
+              Tatuador<br />
               <span className="text-amber-600">Fature R$10.000</span> por mês.
             </h1>
             
@@ -337,7 +337,7 @@ export default function Tatuador10K() {
 
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-amber-600/20 text-center text-gray-400 bg-slate-950">
-        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>© 2026 O Tatuador 10K. Todos os direitos reservados.</p>
+        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>© 2026 A Bíblia do Tatuador 10K. Todos os direitos reservados.</p>
         <p className="text-sm mt-2">Este material é para fins educacionais. Resultados podem variar.</p>
       </footer>
     </div>
