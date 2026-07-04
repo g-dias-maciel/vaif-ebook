@@ -4,6 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-montserrat: "Montserrat", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -113,16 +115,114 @@
   --sidebar-ring: oklch(0.72 0.18 45);
 }
 
+/* ═══════════════════════════════════════════════
+   VAIF — Design Tokens
+   ═══════════════════════════════════════════════ */
+:root {
+  --gold: #D4B04C;
+  --gold-light: #E5C35E;
+  --bg-dark: #0A0A0A;
+  --bg-card: #121212;
+  --text-main: rgb(242, 237, 228);
+  --text-muted: rgb(160, 154, 142);
+  --border-color: #222222;
+}
+
+/* ═══════════════════════════════════════════════
+   VAIF — Diamond Divider
+   ═══════════════════════════════════════════════ */
+.diamond-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.diamond-divider::before,
+.diamond-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-color);
+}
+.diamond {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════
+   VAIF — Animations
+   ═══════════════════════════════════════════════ */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up {
+  opacity: 0;
+  animation: fade-in-up 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/* ═══════════════════════════════════════════════
+   VAIF — Background
+   ═══════════════════════════════════════════════ */
+.bg-vaif {
+  background: #0A0A0A radial-gradient(circle at 80% 20%, rgba(212, 176, 76, 0.05), transparent 40%);
+}
+
+/* VAIF card */
+.card-vaif {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+.card-vaif-premium {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--gold);
+}
+
+/* ═══════════════════════════════════════════════
+   Sticky Mobile CTA
+   ═══════════════════════════════════════════════ */
+@keyframes sticky-cta-in {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+.sticky-cta-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-color);
+  padding: 12px 24px;
+  display: none;
+  animation: sticky-cta-in 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@media (max-width: 767px) {
+  .sticky-cta-mobile {
+    display: block;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
