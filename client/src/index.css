@@ -203,7 +203,7 @@
   background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(12px);
   border-top: 1px solid var(--border-color);
-  padding: 12px 24px;
+  padding: 10px 16px;
   display: none;
   animation: sticky-cta-in 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }

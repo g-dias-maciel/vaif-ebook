@@ -138,7 +138,7 @@ function SectionHeader({ label, title }: { label?: string; title: string }) {
           {label}
         </p>
       )}
-      <h2 className="font-cormorant text-4xl md:text-5xl font-bold text-[var(--text-main)] leading-tight">
+      <h2 className="font-cormorant text-[clamp(1.75rem,5vw,3rem)] md:text-5xl font-bold text-[var(--text-main)] leading-tight">
         {title}
       </h2>
       <DiamondDivider />
@@ -195,12 +195,12 @@ export default function Tatuador10K() {
   }
 
   return (
-    <div className="min-h-screen bg-vaif text-[var(--text-main)]">
+    <div className="min-h-screen bg-vaif text-[var(--text-main)] pb-16 md:pb-0">
 
       {/* ─── Navbar ─── */}
       <nav className="fixed top-0 w-full z-50 bg-[#0A0A0A]/95 backdrop-blur-md border-b border-[var(--border-color)]">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="font-cormorant text-xl md:text-2xl font-bold text-[var(--text-main)]">
+          <div className="font-cormorant text-lg md:text-2xl font-bold text-[var(--text-main)] truncate">
             A Bíblia do<span className="text-[var(--gold)]"> Tatuador 10K</span>
           </div>
           <Button
@@ -213,20 +213,21 @@ export default function Tatuador10K() {
       </nav>
 
       {/* ─── Hero ─── */}
-      <section ref={heroRef} className="min-h-screen flex items-center pt-20 pb-12 px-6">
-        <div className="max-w-6xl mx-auto w-full grid md:grid-cols-5 gap-8 md:gap-12 items-center">
+      <section ref={heroRef} className="min-h-screen flex items-center pt-20 pb-12 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto w-full grid md:grid-cols-5 gap-6 md:gap-12 items-center">
 
           {/* Left: Copy (3/5) */}
-          <div className="md:col-span-3 space-y-8 fade-in-up">
+          <div className="md:col-span-3 space-y-6 md:space-y-8 fade-in-up">
             <div className="inline-block border border-[var(--gold)]/30 px-4 py-2">
               <p className="font-montserrat text-[10px] uppercase tracking-[3px] text-[var(--gold)] font-semibold">
                 ⚡ Pré-lançamento — Restam apenas {stock} cópias por R$147
               </p>
             </div>
 
-            <h1 className="font-cormorant text-5xl md:text-7xl font-bold text-[var(--text-main)] leading-[1.1]">
-              O tatuador que fatura <span className="text-[var(--gold)]">R$10K por mês</span><br />
-              não é mais talentoso que você.
+            <h1 className="font-cormorant text-[clamp(1.8rem,7vw,4.5rem)] md:text-7xl font-bold text-[var(--text-main)] leading-[1.1]">
+              O tatuador que fatura <span className="text-[var(--gold)]">R$10K por mês</span>
+              <span className="hidden md:inline"><br /></span>
+              <span className="block md:inline"> não é mais talentoso que você.</span>
             </h1>
 
             <p className="font-montserrat text-base md:text-lg text-[var(--text-muted)] leading-relaxed">
@@ -263,10 +264,10 @@ export default function Tatuador10K() {
             <div className="pt-4">
               <Button
                 onClick={(e) => handleCta('hero', 'QUERO O SISTEMA PARA CHEGAR AOS R$10K', e)}
-                className="bg-[var(--gold)] hover:bg-[var(--gold-light)] text-[#0A0A0A] font-montserrat text-[12px] uppercase tracking-[2px] font-bold px-10 py-5 h-auto rounded-none transition-all hover:-translate-y-0.5"
+                className="bg-[var(--gold)] hover:bg-[var(--gold-light)] text-[#0A0A0A] font-montserrat text-[11px] md:text-[12px] uppercase tracking-[2px] font-bold px-6 md:px-10 py-5 h-auto rounded-none transition-all hover:-translate-y-0.5 w-full sm:w-auto whitespace-normal"
               >
                 QUERO O SISTEMA PARA CHEGAR AOS R$10K
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="ml-2 w-4 h-4 flex-shrink-0" />
               </Button>
               <p className="font-montserrat text-[10px] text-[var(--text-muted)] mt-3 tracking-[0.5px]">
                 Acesso imediato ao PDF • 30 dias de garantia • Sem assinatura
@@ -288,8 +289,8 @@ export default function Tatuador10K() {
       </section>
 
       {/* ─── Social Proof — Animated Stats ─── */}
-      <section ref={statsRef} className="py-16 px-6 border-y border-[var(--border-color)]">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      <section ref={statsRef} className="py-16 px-4 md:px-6 border-y border-[var(--border-color)]">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
           <AnimatedStat value={1247} suffix="+" label="Tatuadores já compraram" />
           <AnimatedStat value={32} suffix="x" label="Aumento médio de faturamento" decimals={1} />
           <AnimatedStat value={49} suffix="★" label="Avaliação média (2.1K reviews)" decimals={1} />
@@ -298,7 +299,7 @@ export default function Tatuador10K() {
       </section>
 
       {/* ─── Seção de Dores — "Você se identifica?" ─── */}
-      <section ref={painRef} className="py-20 md:py-24 px-6">
+      <section ref={painRef} className="py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
           <SectionHeader title="Você se identifica com alguma destas situações?" />
 
@@ -332,17 +333,17 @@ export default function Tatuador10K() {
             </p>
             <Button
               onClick={(e) => handleCta('pain-section', 'QUERO SAIR DESSA SITUAÇÃO', e)}
-              className="bg-[var(--gold)] hover:bg-[var(--gold-light)] text-[#0A0A0A] font-montserrat text-[12px] uppercase tracking-[2px] font-bold px-8 py-4 h-auto rounded-none transition-all hover:-translate-y-0.5"
+              className="bg-[var(--gold)] hover:bg-[var(--gold-light)] text-[#0A0A0A] font-montserrat text-[11px] md:text-[12px] uppercase tracking-[2px] font-bold px-6 md:px-8 py-4 h-auto rounded-none transition-all hover:-translate-y-0.5 w-full sm:w-auto whitespace-normal"
             >
               QUERO SAIR DESSA SITUAÇÃO
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4 flex-shrink-0" />
             </Button>
           </div>
         </div>
       </section>
 
       {/* ─── Os 7 Módulos ─── */}
-      <section ref={modulesRef} className="py-20 md:py-24 px-6">
+      <section ref={modulesRef} className="py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <SectionHeader label="Conteúdo Completo" title="Os 7 Módulos da Bíblia do Tatuador 10K" />
 
@@ -373,7 +374,7 @@ export default function Tatuador10K() {
       </section>
 
       {/* ─── Trust Badges ─── */}
-      <section ref={trustRef} className="py-12 px-6 border-y border-[var(--border-color)]">
+      <section ref={trustRef} className="py-12 px-4 md:px-6 border-y border-[var(--border-color)]">
         <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-6 md:gap-10">
           <div className="flex items-center gap-2 text-[var(--text-muted)] font-montserrat text-[11px] uppercase tracking-[1px]">
             <CreditCard className="w-4 h-4 text-[var(--gold)]" />
@@ -391,11 +392,11 @@ export default function Tatuador10K() {
       </section>
 
       {/* ─── Quem Está Por Trás ─── */}
-      <section ref={authorRef} className="py-20 md:py-24 px-6">
+      <section ref={authorRef} className="py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <SectionHeader label="Conheça o Autor" title="Quem Está Por Trás Deste Guia" />
 
-          <div className="card-vaif p-8 md:p-10 fade-in-up">
+          <div className="card-vaif p-6 md:p-10 fade-in-up">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 text-center md:text-left">
               <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-[var(--gold)] flex items-center justify-center bg-[var(--bg-card)] flex-shrink-0">
                 <span className="font-cormorant font-bold text-2xl text-[var(--gold)]">VAIF</span>
@@ -420,15 +421,15 @@ export default function Tatuador10K() {
       </section>
 
       {/* ─── Depoimentos ─── */}
-      <section ref={testimonialsRef} className="py-20 md:py-24 px-6 border-y border-[var(--border-color)]">
+      <section ref={testimonialsRef} className="py-20 md:py-24 px-4 md:px-6 border-y border-[var(--border-color)]">
         <div className="max-w-6xl mx-auto">
           <SectionHeader label="Prova Social" title="Resultados Reais de Quem Já Comprou" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
             {testimonials.map((t, idx) => (
               <div
                 key={idx}
-                className="card-vaif p-6 fade-in-up flex flex-col gap-4 hover:border-[var(--gold)]/30 transition-colors"
+                className="card-vaif p-5 md:p-6 fade-in-up flex flex-col gap-4 hover:border-[var(--gold)]/30 transition-colors"
                 style={{ animationDelay: `${(idx % 3) * 0.15}s` }}
                 onClick={() => window._paq?.push(['trackEvent', 'engagement', 'testimonial_click', t.name, idx])}
               >
@@ -463,13 +464,13 @@ export default function Tatuador10K() {
       </section>
 
       {/* ─── Stock Scarcity + CTA ─── */}
-      <section ref={scarcityRef} className="py-16 md:py-20 px-6">
-        <div className="max-w-3xl mx-auto text-center space-y-6 card-vaif p-8 md:p-10 fade-in-up">
+      <section ref={scarcityRef} className="py-16 md:py-20 px-4 md:px-6">
+        <div className="max-w-3xl mx-auto text-center space-y-6 card-vaif p-6 md:p-10 fade-in-up">
           <p className="font-montserrat text-[10px] uppercase tracking-[3px] text-[var(--gold)] font-semibold">
             ⏳ Oferta por tempo limitado
           </p>
 
-          <h2 className="font-cormorant text-3xl md:text-4xl font-bold text-[var(--text-main)]">
+          <h2 className="font-cormorant text-[clamp(1.5rem,4.5vw,2.5rem)] md:text-4xl font-bold text-[var(--text-main)]">
             Esta é a sua chance de entrar para o seleto grupo dos <span className="text-[var(--gold)]">tatuadores que faturam R$10K</span>
           </h2>
 
@@ -492,10 +493,10 @@ export default function Tatuador10K() {
           <div className="pt-2 space-y-3">
             <Button
               onClick={(e) => handleCta('scarcity', 'SIM, QUERO ENTRAR PARA O GRUPO DOS R$10K', e)}
-              className="bg-[var(--gold)] hover:bg-[var(--gold-light)] text-[#0A0A0A] font-montserrat text-[12px] uppercase tracking-[2px] font-bold px-10 py-4 h-auto rounded-none transition-all hover:-translate-y-0.5"
+              className="bg-[var(--gold)] hover:bg-[var(--gold-light)] text-[#0A0A0A] font-montserrat text-[11px] md:text-[12px] uppercase tracking-[2px] font-bold px-6 md:px-10 py-4 h-auto rounded-none transition-all hover:-translate-y-0.5 w-full sm:w-auto whitespace-normal"
             >
               SIM, QUERO ENTRAR PARA O GRUPO DOS R$10K
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4 flex-shrink-0" />
             </Button>
             <p className="font-montserrat text-[10px] text-[var(--text-muted)]">
               Acesso imediato • 30 dias de garantia • Suporte por email
@@ -505,7 +506,7 @@ export default function Tatuador10K() {
       </section>
 
       {/* ─── FAQ (Accordion) ─── */}
-      <section ref={faqRef} className="py-20 md:py-24 px-6 border-t border-[var(--border-color)]">
+      <section ref={faqRef} className="py-20 md:py-24 px-4 md:px-6 border-t border-[var(--border-color)]">
         <div className="max-w-3xl mx-auto">
           <SectionHeader label="Dúvidas" title="Perguntas Frequentes" />
 
@@ -533,9 +534,9 @@ export default function Tatuador10K() {
       </section>
 
       {/* ─── Final CTA ─── */}
-      <section ref={finalCtaRef} className="py-20 md:py-24 px-6 border-t border-[var(--border-color)]">
+      <section ref={finalCtaRef} className="py-20 md:py-24 px-4 md:px-6 border-t border-[var(--border-color)]">
         <div className="max-w-3xl mx-auto text-center space-y-8 fade-in-up">
-          <h2 className="font-cormorant text-4xl md:text-5xl font-bold text-[var(--text-main)] leading-tight">
+          <h2 className="font-cormorant text-[clamp(1.6rem,5vw,3rem)] md:text-5xl font-bold text-[var(--text-main)] leading-tight">
             Você pode continuar cobrando R$300 e vivendo no aperto...
           </h2>
           <p className="font-montserrat text-base text-[var(--text-muted)] max-w-lg mx-auto">
@@ -543,18 +544,18 @@ export default function Tatuador10K() {
             enquanto trabalha menos e ganha mais.
           </p>
 
-          <div className="card-vaif p-6 md:p-8 max-w-md mx-auto space-y-4">
-            <div className="flex justify-center gap-6 text-[var(--text-muted)] font-montserrat text-[11px] uppercase tracking-[1px]">
+          <div className="card-vaif p-5 md:p-8 max-w-md mx-auto space-y-4">
+            <div className="flex flex-wrap justify-center gap-4 text-[var(--text-muted)] font-montserrat text-[10px] md:text-[11px] uppercase tracking-[1px]">
               <span>📄 PDF imediato</span>
               <span>🛡️ Garantia 30 dias</span>
               <span>📱 Suporte via email</span>
             </div>
             <Button
               onClick={(e) => handleCta('final-cta', 'QUERO FAZER PARTE DOS R$10K — R$147', e)}
-              className="bg-[var(--gold)] hover:bg-[var(--gold-light)] text-[#0A0A0A] font-montserrat text-[12px] uppercase tracking-[2px] font-bold px-10 py-4 h-auto rounded-none transition-all hover:-translate-y-0.5 w-full"
+              className="bg-[var(--gold)] hover:bg-[var(--gold-light)] text-[#0A0A0A] font-montserrat text-[11px] md:text-[12px] uppercase tracking-[2px] font-bold px-6 md:px-10 py-4 h-auto rounded-none transition-all hover:-translate-y-0.5 w-full whitespace-normal"
             >
               QUERO FAZER PARTE DOS R$10K — R$147
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4 flex-shrink-0" />
             </Button>
           </div>
 
@@ -566,16 +567,16 @@ export default function Tatuador10K() {
 
       {/* ─── Sticky Mobile CTA ─── */}
       <div className="sticky-cta-mobile">
-        <div className="max-w-lg mx-auto flex items-center justify-between gap-3">
-          <div>
-            <p className="font-montserrat text-[10px] uppercase tracking-[2px] text-[var(--gold)] font-semibold">
+        <div className="max-w-lg mx-auto flex items-center justify-between gap-2">
+          <div className="min-w-0 flex-1">
+            <p className="font-montserrat text-[9px] uppercase tracking-[2px] text-[var(--gold)] font-semibold truncate">
               Últimas {stock} cópias por R$147
             </p>
-            <p className="font-cormorant text-lg font-bold text-[var(--text-main)]">Garantia de 30 dias</p>
+            <p className="font-cormorant text-base font-bold text-[var(--text-main)]">Garantia de 30 dias</p>
           </div>
           <Button
             onClick={(e) => handleCta('sticky-mobile', 'Garantir Agora', e)}
-            className="bg-[var(--gold)] hover:bg-[var(--gold-light)] text-[#0A0A0A] font-montserrat text-[11px] uppercase tracking-[2px] font-bold px-6 py-3 h-auto rounded-none flex-shrink-0"
+            className="bg-[var(--gold)] hover:bg-[var(--gold-light)] text-[#0A0A0A] font-montserrat text-[10px] uppercase tracking-[2px] font-bold px-4 py-3 h-auto rounded-none flex-shrink-0"
           >
             Garantir Agora
           </Button>
@@ -583,7 +584,7 @@ export default function Tatuador10K() {
       </div>
 
       {/* ─── Footer ─── */}
-      <footer className="py-8 px-6 border-t border-[var(--border-color)] text-center bg-[#0A0A0A]">
+      <footer className="py-8 px-4 md:px-6 border-t border-[var(--border-color)] text-center bg-[#0A0A0A]">
         <p className="font-montserrat text-xs text-[var(--text-muted)]">
           © 2026 A Bíblia do Tatuador 10K. Todos os direitos reservados.
         </p>
